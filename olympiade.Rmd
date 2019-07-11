@@ -1,30 +1,391 @@
 ---
-title: "olympiade"
-author: "Thomas Van Hoey"
-date: "7/11/2019"
-output: html_document
+title: "Language, culture and cognition"
+subtitle: "A short lexical semantic introduction"
+author: "Thomas Van Hoey 司馬智"
+#date: "7/11/2019"
+output:
+  bookdown::pdf_document2:
+    latex_engine: xelatex
+    toc: no
+    fig_caption: yes
+indent: true
+
+#bibliography: /Users/Thomas/Desktop/latexref.bib
+#csl: unified-style-linguistics.csl
+
+#    fig_caption: yes
+#    keep_tex: true
+
+header-includes: 
+  - \usepackage{expex}
+  - \usepackage{multirow}
+  - \usepackage{float}
+  - \usepackage{bbding}
+
+documentclass: article
+fontsize: 12pt
+linestretch: 1.5
+
+mainfont: Noto Serif
+CJKmainfont: Noto Sans CJK TC
+
 ---
 
 ```{r setup, include=FALSE}
 knitr::opts_chunk$set(echo = TRUE)
 ```
 
-## R Markdown
+# Introduction
 
-This is an R Markdown document. Markdown is a simple formatting syntax for authoring HTML, PDF, and MS Word documents. For more details on using R Markdown see <http://rmarkdown.rstudio.com>.
+This text serves as a very short introduction to the interplay between language, culture and cognition, by focusing on lexical semantics (詞彙語意學). 
+The main principle that underlies this text is as follows: the world exists out there and we as humans experience it. 
+We use language as a way to put this experience into words. This has some important consequences. 
+For instance, the languages we use tend to highlight different aspects of reality, and learning different languages is a lot about learning these often subtle differences in highlight. 
+For instance, the concept of COMPUTER can be expressed in a few different ways. 
+English will use 'compute-er' ('count-THING') as its word, French uses 'ordin-ateur' < Latin ordo 'order' + Fr. 'teur' THING, so 'ordener'. 
+Afrikaans uses 'reken-aar' ('calculate'-THING), and Chinese has 'electric-brain'.
+It is important to emphasize that while these words are composed in this way, it does not mean that everytime a Chinese person sees a computer, he thinks of electric brains, or that when an Afrikaans speakers talks about one he is performing a mental simulation of a 'calculating machine' — instead computers are computers, but there is a difference in how this machine is conceptualized^[For more languages, see https://www.omniglot.com/language/names/computerparts.htm].
 
-When you click the **Knit** button a document will be generated that includes both content as well as the output of any embedded R code chunks within the document. You can embed an R code chunk like this:
 
-```{r cars}
-summary(cars)
-```
+\pex COMPUTER
+\a English: *computer*
+\a French: *ordinateur*
+\a Afrikaans: *rekenaar*
+\a Chinese: 電腦
+\xe
 
-## Including Plots
+So given that we have words and word meanings, we can study these from two different perspectives, each answering a different question. 
+The first question is "what are the different meanings of a given word?". 
+The second question is "if we have a meaning, what are the different words that relate to it?". The first question is asking for a **semasiological** (語義學) perspective; the second for a **onomasiological** (命名學) perspective. 
+In what follows we will go through these and give some examples, because these two perspectives can help you solve problems in the Linguistics Olympiad when there are some items you need to figure out but cannot seem to make head nor tails of.
 
-You can also embed plots, for example:
+# Onomasiology
 
-```{r pressure, echo=FALSE}
-plot(pressure)
-```
+The main question that drives onomasiology is **"where does this word come from?"**. There are about five ways that words could have appeared in a new language. These are: 1) applying productive morphological rules; 2) making new words; 3) distorting existing word forms; 4) borrowing; 5) semasiological extension.
 
-Note that the `echo = FALSE` parameter was added to the code chunk to prevent printing of the R code that generated the plot.
+## Productive morphological rules
+
+This is the most important and usual way of forming new words, and the first strategy you should try to discover in a problem set: what are the morphemes and what do they do?
+For example, people who aren't familiar with Chinese can probably still make sense of the dataset below by using logic, and easily identify that 學 means 'study' or something similar. 
+And from there on, counting the number of forms and meanings will get you to useful puzzle pieces that, in the right order, allow for meaningful words. 
+This ordering of course depends on the productive morphological rules, especially the productivity^[To be productive means that this morpheme is still alive in the current stage of a language. Can you think of morphemes in languages you're familiar with that are no longer productive?]
+of the morpheme 學. 
+
+\pex Chinese dataset
+\a 生物學
+\a 物理學
+\a 化學
+\a 生化學
+\a 語言學
+\a 地理學
+\a 地質學
+\xe
+
+\pex English dataset
+\a biochemistry
+\a geology
+\a linguistics
+\a geography
+\a chemistry
+\a biology
+\a physics
+\xe
+
+## Neologisms
+
+Words that appeared "out of blue nothing" are called neologisms. 
+Real neologisms are very rare, but sometimes good examples can be found, like the one for SMURF below.
+Very interesting is that in Dutch, French and English there is a denominal verb form *to smurf*, which acts as a template verb for all sorts of actions -- similar to the vague verbs *nòng* 弄 and *gǎo* 搞 in Chinese.
+
+Another way of neologisms, that is slightly more common, is through onomatopoeic formation. 
+This means that the new word follows the sound of the thing it is mimicking. 
+The classic example in English is *cuckoo*, but also verbs like *to purr* for a cat. 
+
+\pex SMURF
+\a Dutch: *smurf*; verb: *smurf-en* 'to smurf'
+\a French: *Schtroumpf*; verb: *schtroumpf-er* 'to smurf'
+\a Chinese: *lán-sè xiǎo jīng.líng* 藍色小精靈 'blue-color small spirit'
+\xe
+
+## Distortion of existing words
+
+In this category there are five big groups: ellipsis, contamination/blending, folk etymology, morphological reinterpretation and phonetic developments.
+
+\pex ellipsis
+\a Pianoforte > piano 'piano'
+\a 語言學奧林匹克 > 語奧 'linguistics olympiad'
+\xe
+
+\pex contamination / blending
+\a Irregardless vs. irrespective and regardless 
+\xe
+
+\pex  folk etymology and morphological reinterpreatioin
+\a Ham-burger 'bun with meat' < Hamburg-er 'person who is from the German city of Hamburg'
+\a Cheese-burger 'bun with meat and cheese'
+\xe
+
+\pex phonetic developments
+\a Peep < ME pepen < ME pipen < OE pipian
+(but since /i/ changed to /ai/ and the sound needed to stay /i/ it was respelled /peep/).
+\xe
+
+## Borrowing
+
+This is also an extremely common way of getting new words in a language. Often the target language only takes on a few of the meanings of this word, or expands it through its own lens. And equally often the target language adapts the phonology of the borrowed word into its own system.
+
+\pex COMPUTER
+\a American English: /kəmˈpjutɚ/
+\a British English: /kəmˈpjuːtə/
+\a Dutch: /komˈpjuːtər/
+\xe
+
+## Semasiological extension
+
+These mechanisms technically also function as a way of making new word forms. Let us explore in the next section.
+
+# Semasiology
+
+The main question that drives semasiology is **"what do words mean?"**. 
+Below we highlight some of the most common ways that words can change their meanings: generalisation and specialisation, amelioration and pejoration, metonymy, and metaphor.
+
+## Generalisation and specialisation
+
+Generalisation happens when a word meaning originally referred to a very specific meaning but over time broadens its span of reference. 
+Specialisation is the opposite: when a word originally had a broader range of meanings but this narrowed over time.
+
+\pex generalisation of *cola*
+\a 可樂 'coca cola by the Coca Company' > 'any type of blackish lemonade, like 可口可樂 or 百事可樂etc.'
+\xe
+
+\pex specialisation of English *fowl*
+\a German: *Vogel* 'bird'
+\a Dutch: *vogel* 'bird'
+\a English *fowl* 'bird of the order Galliformes (chicken, turkey, pheasant etc.)'
+\a Middle English: *foul*, *foghel*, *fowel*, *fowele* 'bird'
+\a Proto-Germanic: *fuglaz* 'bird'
+\xe
+
+## Amelioration and pejoration
+
+Amelioration is the case when the connotation of a word becomes more positive (it is *felt* to be more positive); pejoration is the opposite: it is *felt* to be worse.
+
+\pex amelioration of *geek*
+\a (1916) 'sideshow freak' 
+\a (1983) > 'student who lacks social graces but is obsessed with computers and new technology ' 
+\a (now) > 'someone with specialist knowledge'
+\xe
+
+\pex pejoration of *awful*
+\a 'worthy of awe' 
+\a > 'very bad'
+\xe
+
+## Metonymy: *CONTIGUITY*
+
+Metonymy is a language phenomenon that is based on contiguity. This means that there is a real connection between two meanings. A few common types include the following
+
+\pex types of metonymy
+\a CONTAINER FOR CONTAINED: a cup -> the content of the cup, e.g. drink a cup (of coffee)
+\a CONTAINED FOR CONTAINER: e.g. where is the coke? (bottle in which coke is contained)
+\a PART FOR WHOLE: head -> person, e.g. do a head count (count number of people)
+\a WHOLE FOR PART: e.g. fill up the car (fill up only the tank with gas)
+\a PRODUCT FOR PLACE OF ORIGIN: champagne comes from the Champagne region
+\a MEANS FOR RESULT: e.g. wet circles on the table after drinking something
+\xe
+
+Metonymy is an *extremely common* language phenomenon, and while it may not appear in most datasets of the linguistics olympiad, it still may. So do consider it as well.
+
+## Metaphor: *SIMILARITY*
+
+This too is an *extremely common* phenomenon in language, and it has a higher likelihood of showing up in your dataset. While metonymy looks at real connections between word meanings, metaphor is concerned with perceived similarities between word meanings. In the next example, the words *legs* and *arms* are used, but generally only animals (humans) have legs and arms. So we then say that there is a perceived similarity between this object and humans. That is a metaphorical relationship.
+
+\ex This chair has four legs and two arms.
+\xe
+
+There are many kinds of metaphors, and here we discuss two classifications, in order to show the many ways creative thinking can help you solve problems.
+
+### Classification one: material metaphor, functional metaphor, experiential metaphor
+
+Material metaphors are about similarities in the form of two things. 
+Functional metaphors are based on similarities in the function of two things.
+Experiential metaphors are based on the subjective experience a language user has of the things involved. This is often called synesthesia, and involves different sensory perceptions.
+
+\pex metaphors: classification one
+\a material metaphor: Let's meet at the *foot of the mountain*. 
+\a functional metaphor: The *source* of a river vs. the *sources* used when writing this text.
+\a functional metaphor: A fruit is *ripe* for plucking vs. somebody is *ripe* for a function.
+\a experiential metaphor: "That *yellow color* (VISUAL) is so *loud* (AUDITORY)!", he said with a *heavy* (TACTILE) *voice* (AUDITORY).
+\xe
+
+### Classification two: dead versus living metaphor
+
+In the previous sections we talked about the *foot of the mountain* and 電腦 'electric brain > computer'. These are both metaphorical in origin, but the question should be asked if that metaphor is still alive. We can still see *foot* in its literal meaning 'foot of a person' but is that literal meaning still important when used in *foot of the mountain*. Similarly, how important are the parts *electric* and *brain* in 電腦? 
+Remember that your dataset can also have these somewhat deadish metaphors.
+
+### Classification three: conceptual metaphors
+
+Sometimes you can encounter a set of expressions that at first sight don't seem to relate to one another. But if you look at it from a  bundle of these expressions, there may actually some metaphor involved. Let us look at the following example:
+
+\pex conceptual metaphors
+He is known for his many *rapid conquests*. She *fought* for him, but his mistress *won out*. He *fled from* her advances. She *pursued* him *relentlessly.* He is slowly *gaining ground* with her. He *won her hand* in marriage. He *overpowered* her. She is *besieged* by suitors. He has to *fend them off*.
+\xe
+
+From these examples you can get that they are talking about LOVE. But in doing so, they use a lot of MILITARY terms, words related to WAR. We can then say that there is a conceptual metaphor of **LOVE IS WAR**. 
+
+# Interim summary
+
+In the previous (very) brief exploration, we have seen that the relations between words and meanings can be studied from two main perspectives, divided into many different categories. In practice, there often isn't a clear-cut line between which phenomenon we are dealing with. So, the purpose of this chapter is not to teach you all this specialised vocabulary. What it meant to do is **help you think in a creative manner about language problems when you're stuck.**
+
+
+# Case study 1: Match
+
+A good first case study of these principles is looking at how different languages got their word for *match* 火柴. Let us first say that *match* means 'short, slender piece of wood or other material tipped with a chemical substance which produces fire when rubbed against a rough or chemically prepared substance'. Now let us look at how different languages got their word (target form), through which process or relation, based on which source form(s).
+
+\ex definition of *match*
+'short, slender piece of wood or other material tipped with a chemical substance which produces fire when rubbed against a rough or chemically prepared substance'
+\xe 
+
+language | target word form | source (original meaning) | process
+---------|------------------|---------------------------|--------
+English  | *match*          | 'wick'                    | metaphorical similarity
+French   | *allumette*      | 'splinter'                | taxonomical subordination (cf. case study 2)
+German   | *Streich-holz*   | 'rub-wood'                | metonymical compound
+Spanish  | *fósforo*        | 'fire-bringing'           | borrowing (Greek) + metonymy
+Spanish  | *cer-illa*       | 'wax-DIMINUTIVE'          | metaphorical similarity
+Dutch    | *luci-fer*        | 'light-bringer'          | borrowing (Latin)
+Chinese  | 火-柴             | 'fire-wood'              | metonymical compound
+
+
+# Case study 2: Tree, forest, wood
+
+Now, there is another problem that you can encounter. How can you be sure that the translations you make (in your head) are the right ones? Let's say you have the following dataset:
+
+\pex tree, forest, wood in different languages
+\a Danish: *trae*, *skov*
+\a French: *arbre*, *bois*, *forêt*
+\a German: *Baum*, *Holz*, *Wald*
+\a Spanish: *árbol*, *madera*, *leña*, *bosque*, *selva*
+\a Dutch: *boom*, *bos*, *hout*, *woud*
+\xe
+
+French and German both have three terms for wood-related words. Are they the same? A first categorization (that has been done for us) shows that they are not, and that Danish, French, German, Dutch and Spanish differentiate the terms as follows:
+
+\ex first analysis
+\begin{table}[H]
+\begin{tabular}{lllll}
+\multicolumn{5}{l}{lexical items in lanaguages}                                                                                                                                                                                                                             \\
+Danish                                               & French                                              & German                                              & Spanish                              & Dutch                                               \\ \hline
+\multicolumn{1}{|l|}{\multirow{3}{*}{\textit{trae}}} & \multicolumn{1}{l|}{\textit{arbre}}                 & \multicolumn{1}{l|}{\textit{Baum}}                  & \multicolumn{1}{l|}{\textit{árbol}}  & \multicolumn{1}{l|}{\textit{boom}}                  \\ \cline{2-5} 
+\multicolumn{1}{|l|}{}                               & \multicolumn{1}{l|}{\multirow{3}{*}{\textit{bois}}} & \multicolumn{1}{l|}{\multirow{2}{*}{\textit{Holz}}} & \multicolumn{1}{l|}{\textit{madera}} & \multicolumn{1}{l|}{\multirow{2}{*}{\textit{hout}}} \\ \cline{4-4}
+\multicolumn{1}{|l|}{}                               & \multicolumn{1}{l|}{}                               & \multicolumn{1}{l|}{}                               & \multicolumn{1}{l|}{\textit{leña}}   & \multicolumn{1}{l|}{}                               \\ \cline{1-1} \cline{3-5} 
+\multicolumn{1}{|l|}{\multirow{2}{*}{\textit{skov}}} & \multicolumn{1}{l|}{}                               & \multicolumn{1}{l|}{\multirow{2}{*}{\textit{Wald}}} & \multicolumn{1}{l|}{\textit{bosque}} & \multicolumn{1}{l|}{\textit{bos}}                   \\ \cline{2-2} \cline{4-5} 
+\multicolumn{1}{|l|}{}                               & \multicolumn{1}{l|}{\textit{forêt}}                 & \multicolumn{1}{l|}{}                               & \multicolumn{1}{l|}{\textit{selva}}  & \multicolumn{1}{l|}{\textit{woud}}                  \\ \hline
+                                                     &                                                     &                                                     &                                      &                                                    
+\end{tabular}
+\end{table}
+\xe
+
+
+So now we want to turn this into an informative map. Dictionaries and encyclopedias will help us to understand that we can use Spanish in this case as a way to differentiate the different possible meanings.
+
+\ex second analysis
+\begin{table}[H]
+\begin{tabular}{lllllll}
+                                      &                                                                & \multicolumn{5}{l}{lexical items}                                                                                                                                                                                                                            \\
+                                      &                                                                & Danish                                              & French                                              & German                                              & Spanish                              & Dutch                                               \\ \cline{3-7} 
+\multirow{5}{*}{analytical tives} & \multicolumn{1}{l|}{\textsc{tree}}            & \multicolumn{1}{l|}{\multirow{3}{*}{\textit{trae}}} & \multicolumn{1}{l|}{\textit{arbre}}                 & \multicolumn{1}{l|}{\textit{Baum}}                  & \multicolumn{1}{l|}{\textit{árbol}}  & \multicolumn{1}{l|}{\textit{boom}}                  \\ \cline{4-7} 
+                                      & \multicolumn{1}{l|}{\textsc{wood (material)}} & \multicolumn{1}{l|}{}                               & \multicolumn{1}{l|}{\multirow{3}{*}{\textit{bois}}} & \multicolumn{1}{l|}{\multirow{2}{*}{\textit{Holz}}} & \multicolumn{1}{l|}{\textit{madera}} & \multicolumn{1}{l|}{\multirow{2}{*}{\textit{hout}}} \\ \cline{6-6}
+                                      & \multicolumn{1}{l|}{\textsc{firewood}}        & \multicolumn{1}{l|}{}                               & \multicolumn{1}{l|}{}                               & \multicolumn{1}{l|}{}                               & \multicolumn{1}{l|}{\textit{leña}}   & \multicolumn{1}{l|}{}                               \\ \cline{3-3} \cline{5-7} 
+                                      & \multicolumn{1}{l|}{\textsc{forest (small)}}  & \multicolumn{1}{l|}{\multirow{2}{*}{\textit{skov}}} & \multicolumn{1}{l|}{}                               & \multicolumn{1}{l|}{\multirow{2}{*}{\textit{Wald}}} & \multicolumn{1}{l|}{\textit{bosque}} & \multicolumn{1}{l|}{\textit{bos}}                   \\ \cline{4-4} \cline{6-7} 
+                                      & \multicolumn{1}{l|}{\textsc{forest (large)}}  & \multicolumn{1}{l|}{}                               & \multicolumn{1}{l|}{\textit{forêt}}                 & \multicolumn{1}{l|}{}                               & \multicolumn{1}{l|}{\textit{selva}}  & \multicolumn{1}{l|}{\textit{woud}}                  \\ \cline{3-7} 
+\end{tabular}
+\end{table}
+\xe
+
+But a linguist will want to improve the generalizability of the data even further, and can then turn the data in the following structure. This way we can compare all the different terms against different criteria.
+
+\ex final analysis
+\begin{table}[H]
+\begin{tabular}{ccccccc}
+                         &                 & \multicolumn{5}{c}{meanings}                                        \\
+                         &                 & tree & wood (material) & firewood & forest (small) & forest (large) \\
+\multirow{2}{*}{Danish}  & \textit{trae}   &   \Checkmark   &    \Checkmark             &    \Checkmark      &                &                \\
+                         & \textit{skov}   &      &                 &          &     \Checkmark           &    \Checkmark            \\
+\multirow{3}{*}{French}  & \textit{arbre}  &  \Checkmark    &                 &          &                &                \\
+                         & \textit{bois}   &      &     \Checkmark            &    \Checkmark      &        \Checkmark        &                \\
+                         & \textit{forêt}  &      &                 &          &                &        \Checkmark        \\
+\multirow{3}{*}{German}  & \textit{Baum}   &  \Checkmark    &                 &          &                &                \\
+                         & \textit{Holz}   &      &       \Checkmark          &   \Checkmark       &                &                \\
+                         & \textit{Wald}   &      &                 &          &       \Checkmark         &    \Checkmark            \\
+\multirow{5}{*}{Spanish} & \textit{árbol}  & \Checkmark     &                 &          &                &                \\
+                         & \textit{madera} &      &        \Checkmark         &          &                &                \\
+                         & \textit{leña}   &      &                 &     \Checkmark     &                &                \\
+                         & \textit{bosque} &      &                 &          &          \Checkmark      &                \\
+                         & \textit{selva}  &      &                 &          &                &           \Checkmark     \\
+\multirow{4}{*}{Dutch}   & \textit{boom}   &   \Checkmark   &                 &          &                &                \\
+                         & \textit{hout}   &      &       \Checkmark          &      \Checkmark    &                &                \\
+                         & \textit{bos}    &      &                 &          &       \Checkmark         &                \\
+                         & \textit{woud}   &      &                 &          &                &       \Checkmark        
+\end{tabular}
+\end{table}
+\xe
+
+Now, in the linguistics olympiad you probably won't have to take it this far, but we hope the reasoning is clear. This way of doing things can become useful when you have to make new words in the second part of a linguistic problem.
+
+
+# Case study 3: Cultural specific classifications
+
+Most languages and cultures have a 7-day cycle, but they do differ in where the days of the week (and weekend) came from. Let us have a look:
+
+
+language | Monday | Tuesday | Wednesday | Thursday | Friday | Saturday  | Sunday
+---------| -------| ------- | --------- | -------- | ------ | --------  | ------
+English  | 'moon-day' | Tiwaz / Tyr | Wodan / Odin | Thor | Frigg | Saturn | sun
+Dutch    | maandag | dinsdag | woensdag | donderdag | vrijdag | zaterdag | zondag
+German   | Montag  | Dienstag | Mittwoch | Donnerstag | Freitag | Samstag | Sunntag
+.        |         |          | 'mid-week|
+Irish    | Dé Luan  |	Dé Mairt  |	Dé Céadaoin  |	Déardaoin | Dé h-Aoine | Dé Sathairn | Dé Domhnaigh |
+  .       | 'moon day' | 'Mars' day' | 'day of the first fast' | 'day between fasts'	| 'day of the (primary) fast'	| 'Saturn's day' | 'Lord's day'
+Chinese  | 禮拜一 | 禮拜二  | 禮拜三    | 禮拜四   | 禮拜五 | 禮拜六    | 禮拜日
+Chinese  | 星期一 | 星期二  | 星期三    | 星期四   | 星期五 | 星期六    | 星期日
+Chinese  | 週一 | 週二  | 週三    | 週四   | 週五 | 週六    | 週日
+Japanese | 月曜日 | 火曜日 | 水曜日 | 木曜日 | 金曜日  | 土曜日 | 日曜日 
+
+As a fun exercise, look up the days in the week in another language. 
+You can start here: https://www.omniglot.com/language/time/days.htm  
+
+
+# Case study 4: locations
+
+Different cultures and languages can also differ in the way they talk about locations. 
+Some languages use left and right, other use the different points of the compass (north-east-south-west), or they use salient elements in the landscape (towards the mountain - towards the sea).
+
+\pex body as center
+\a left-right
+\a front-back
+\xe
+
+\pex fixed coordinates with e.g. cardinal directions
+\a north
+\a east
+\a south
+\a west
+\xe
+
+\pex land-sea axis
+\a Yami: *rala* 'next to the mountain'; *laod* 'towards the sea'
+\a Hawaiian: *mauka* 'landward'; *makai* 'seaward'
+\xe
+
+# Conclusion
+
+As stated before, this is just a small guide to help you explore *what is possible*. 
+Whenever you are faced with a dataset, try to find the meanings of the morphemes and then put them together in a creative manner.
+Look at all the clues they give you.
+For instance, if you have the words for 'sea' and 'shoulder' and you see them combined in 'sea-shoulder', try to think of the *metaphor* this could be.
+'shoulder' is a part of the body, but the body in this case is the 'sea', so 'sea-shoulder' can be the 'coastline' or something similar.
+So when you encounter a problem like that, don't panic, breathe, and analyze.
+Good luck!
+
+
